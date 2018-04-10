@@ -8,7 +8,9 @@ services:
       dockerfile: Dockerfile
     image: nginx:alpine
     ports: 
-      - "3002:80"
+      - "3002:3002"
+    networks:
+      - local
   api:
     image: api:latest
     build:      
